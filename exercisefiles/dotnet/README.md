@@ -1,6 +1,6 @@
 # Goal
 
-The goal is to create a Minimal WebAPI using .NET 7.0 and a corresponding Docker image with the help of GitHub Copilot.
+The goal is to create a Minimal WebAPI using .NET 8.0 and a corresponding Docker image with the help of GitHub Copilot.
 Follow the instructions below and try to use GitHub Copilot as much as possible.
 Try different things and see what GitHub Copilot can do for you, like generating a Dockerfile or a class, add comments, etc.
 
@@ -21,8 +21,14 @@ dotnet test
 
 To run the app, open a terminal in the `dotnet` folder and run:
 
+**Windows environments**
 ``` bash
 dotnet run --project .\MinimalAPI\MinimalAPI.csproj
+```
+
+**Codespaces, Linux & Unix environments**
+``` bash
+dotnet run --project ./MinimalAPI/MinimalAPI.csproj
 ```
 
 ### Exercise 1: Introduction
@@ -41,7 +47,7 @@ A total of 1 test files matched the specified pattern.
 Passed!  - Failed:     0, Passed:     1, Skipped:     0, Total:     1, Duration: < 1 ms - MinimalAPI.Tests.dll
 ```
 
-### Exercise 2: Building new functionlities
+### Exercise 2: Building new functionalities
 
 
 Inside `MinimalAPI\Program.cs` add the following endpoints using the help of Copilot:
@@ -82,12 +88,18 @@ Inside `MinimalAPI\Program.cs` add the following endpoints using the help of Cop
 
 - **/tellmeajoke**:
 
-    * Make a call to the joke api and return a random joke using axios
+    * Make a call to the joke api and return a random joke
+
+> **_NOTE:_** Here's example where you might need to use you own knowledge and judgement
+to validate that Copilot follows best practices. Just because Copilot mimic 
+what many developers do, doesn't always mean it's the correct way. You might need 
+to be extra specific in your prompt to let Copilot know what's best practices. 
+_Hint: Pay attention to HttpClient._
         
 - **/moviesbydirector**:
 
     * Receive by querystring a parameter called director
-    * Make a call to the movie api  and return a list of movies of that director using axios
+    * Make a call to the movie api and return a list of movies of that director
     * Return the full list of movies
 
 > **_NOTE:_** This will require to browse to https://www.omdbapi.com/apikey.aspx and request a FREE API Key
