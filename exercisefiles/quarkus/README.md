@@ -24,7 +24,7 @@ Package: `mvn package`
 
 Run: `mvn quarkus:dev`
 
-Test: `curl -v http://localhost:8080/hello?key=world`
+Test: `curl -v http://localhost:8080?key=world`
 
 ### 2. Dates comparison
 
@@ -72,7 +72,7 @@ Create a zip file with the content of a given folder. The path of the folder sho
 
 Use the Dockerfile provided to create a docker image of the application. In this case, the full content is provided, but in order build, run and test the docker image, you will use Copilot as well to generate the commands. 
 
-I have created a DOCKER.md file where we will document the steps to build the application (native), build the container image, yun the container and test the container.
+I have created a DOCKER.md file where we will document the steps to build the application (native), build the container image, run the container and test the container.
 
 
 
